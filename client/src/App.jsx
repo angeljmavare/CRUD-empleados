@@ -134,7 +134,7 @@ function App() {
   }
 
   const getEmpleados = () => {
-    Axios.get("http://localhost:3001/empleados").then((response) => {
+    Axios.get("db-empleados-crud.cz2wiggog8ns.us-east-2.rds.amazonaws.com/empleados").then((response) => {
       setEmpleados(response.data);
     });
   }
