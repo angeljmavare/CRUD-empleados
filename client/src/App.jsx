@@ -134,7 +134,7 @@ function App() {
   }
 
   const getEmpleados = () => {
-    Axios.get("https://crud-empleados-sand.vercel.app/empleados").then((response) => {
+    Axios.get("http://crud-empleados-sand.vercel.app/empleados").then((response) => {
       setEmpleados(response.data);
     });
   }
