@@ -18,7 +18,7 @@ function App() {
   const [empleados, setEmpleados] = useState([]);
 
   const add = () => {
-    Axios.post("localhost:3001/create", {
+    Axios.post("https://localhost:3001/create", {
       nombre: nombre,
       edad: edad,
       pais: pais,
