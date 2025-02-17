@@ -18,7 +18,7 @@ function App() {
   const [empleados, setEmpleados] = useState([]);
 
   const add = () => {
-    Axios.post("http://crud-empleados-sand.vercel.app/create", {
+    Axios.post("https://crud-empleados-sand.vercel.app/create", {
       nombre: nombre,
       edad: edad,
       pais: pais,
@@ -56,7 +56,7 @@ function App() {
   }
 
   const update = () => {
-    Axios.put("http://crud-empleados-sand.vercel.app/update", {
+    Axios.put("https://crud-empleados-sand.vercel.app/update", {
       id: id,
       nombre: nombre,
       edad: edad,
@@ -95,7 +95,7 @@ function App() {
       cancelButtonText: "Cancelar"
     }).then((result) => {
       if (result.isConfirmed) {
-        Axios.delete(`http://crud-empleados-sand.vercel.app/delete/${val.id}`).then(() => {
+        Axios.delete(`https://crud-empleados-sand.vercel.app/delete/${val.id}`).then(() => {
           Swal.fire({
             title: "Empleado Eliminado!",
             html: "<strong>" + val.nombre + "</strong> ha sido eliminado.",
@@ -134,7 +134,7 @@ function App() {
   }
 
   const getEmpleados = () => {
-    Axios.get("http://crud-empleados-sand.vercel.app/empleados").then((response) => {
+    Axios.get("https://crud-empleados-sand.vercel.app/empleados").then((response) => {
       setEmpleados(response.data);
     });
   }
