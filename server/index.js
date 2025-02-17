@@ -4,11 +4,7 @@ const { Pool } = require('pg');
 const cors = require('cors');
 const port = 3001;
 
-app.use(cors({
-    origin: 'https://crud-empleados-sand.vercel.app'
-  }));
-
-  
+app.use(cors());
 app.use(express.json());
 
 const db = new Pool({
