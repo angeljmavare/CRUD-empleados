@@ -2,13 +2,14 @@ const express = require('express');
 const app = express();
 const { Pool } = require('pg');
 const cors = require('cors');
-const port = 3001;
+const port = process.env.PORT || 3001;
 
 app.use(cors());
+
 app.use(express.json());
 
 const db = new Pool({
-    host: 'db-empleados-crud.cz2wiggog8ns.us-east-2.rds.amazonaws.com',
+    host: 'localhost',
     user: 'postgres',
     password: 'postgres',
     database: 'empleados_crud',
